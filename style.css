@@ -1,0 +1,102 @@
+body{
+  height:100vh;
+  background: radial-gradient(circle at bottom, #000711);
+  overflow:hidden;
+  font-family: 'Segoe UI', sans-serif;
+  justify-content: center;
+  align-items: center;
+  display:flex;
+        
+        }
+        body, html {
+           
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #000711; /* Fondo azul noche profundo */
+            
+        }
+        body::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: transparent url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+      animation: estrellas 10s linear infinite;
+    }
+    @keyframes estrellas {
+      from { background-position: 0 0; }
+      to { background-position: 1000px 1000px; }
+    }*/
+        canvas {
+            display: block;
+        }
+        .boton{
+            cursor:pointer;
+            border:none;
+            border-radius:10px;
+            width: 350px;
+            height: 70px;
+            position:absolute;
+            padding:2px;
+            z-index: 1000;
+
+        }
+        .carta{
+            border:1px solid black;
+            padding: 2px;
+            height: auto;
+            width:400px;
+            background-color: bisque;
+            display:none;
+            position:fixed;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            border-radius: 20px;
+            text-align: center;
+            z-index: 1000;
+        }
+        /* ❄️ Nieve */
+.snow{
+  position:absolute;
+  top:-20px;
+  color:white;
+  opacity:none;
+  animation: fall linear infinite;
+}
+
+@keyframes fall{
+  to{
+    transform: translateY(110vh);
+  }
+}
+.ovelay{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    display:none;
+    z-index: 999;
+
+}
+#cerrar{
+    padding: 8xp 15px;
+    border-radius: 8px;
+    cursor:pointer;
+    margin-top:10px;
+    background-color: red;
+}
+.audio{
+    position:fixed;
+    top:0;
+    left:0;
+    width: 500px;
+    height: 200px;
+    z-index: 1000;
+    gap:50px;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hapy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="audio">
+        <audio id="audios" autoplay loop >
+        <source src="cumple.mpeg">
+    </audio>
+</div>
+     <button class="boton"><h1>👉✉📩Open📩✉👈</h1></button>
+    
+     <div id="cartaMensaje" class="carta">
+  
+    <h2>🌝 Feliz Cumpleaños Puchichi Inservible🎁</h2>
+    <b><p>No tienes mi sangre, no te vi crecer, no tienes </p> 
+            <p>mi apellido pero aun asi eres mi</p>
+                   <p>✨🌟Hermano🌟✨</p>
+                  <p>ATTE:😎💪</p> </b>
+    
+    
+<button id="cerrar"><h2>👉🚪</h2></button>
+</div>
+</div>
+   
+     <div id="ovelay" class="ovelay"></div>
+          
+
+     <canvas id="canvasCometas"></canvas>
+
+<script>
+
+       function openGift(){
+  document.getElementById("cartaMensaje").style.display="flex";
+}
+       function closeGift(){
+  document.getElementById("cartaMensaje").style.display="none";
+}
+
+        
+  
+   
+    </script>
+</body>
+<script>
+
+       const boton=document.querySelector('.boton');
+       const carta=document.getElementById('cartaMensaje');
+       const ovelay=document.getElementById('ovelay');
+       const cerrar=document.getElementById('cerrar')
+       boton.addEventListener('click',()=>{carta.style.display='block';ovelay.style.display='block'});
+       cerrar.addEventListener('click',()=>{carta.style.display='none';ovelay.style.display='none';});
+       </script>
+       <script>
+/*for(let i=0;i<200;i++){
+  let s=document.createElement("div");
+  s.className="snow";
+  s.innerHTML="<h2></h2>";
+  s.style.left=Math.random()*100+"vw";
+  s.style.fontSize=(6+Math.random()*14)+"px";
+  s.style.animationDuration=(6+Math.random()*6)+"s";
+  document.body.appendChild(s);
+}*/
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const audios = document.getElementById('audios');
+  const boton = document.querySelector('.boton');
+
+  // Reproducir audio al hacer clic en el botón
+  boton.addEventListener('click', () => {
+    audios.play().catch(error => {
+      console.log('Audio bloqueado, pero funciona al hacer clic en el navegador si se solicita');
+    });
+  });
+});
+</script>
+</html>
